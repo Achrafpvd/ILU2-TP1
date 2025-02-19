@@ -1,5 +1,7 @@
 package villagegaulois;
 
+import java.util.Iterator;
+
 import personnages.Chef;
 import personnages.Gaulois;
 
@@ -12,6 +14,20 @@ public class Village {
 	public Village(String nom, int nbVillageoisMaximum) {
 		this.nom = nom;
 		villageois = new Gaulois[nbVillageoisMaximum];
+	}
+	
+	private static class Marche {
+		private Etal[] etals;
+
+		private Marche(int nbEtals) {
+			etals = new Etal[nbEtals];
+			for (int i = 0; i < nbEtals; i++) {
+				etals[i] = new Etal();
+				
+			}
+		}
+		
+		
 	}
 
 	public String getNom() {
